@@ -45,7 +45,7 @@ Kubernetes architecture consists of two main sections: the **Control Plane** and
 
 The following diagram illustrates the Kubernetes architecture in an easy-to-understand layout:
 
-![Kubernetes Architecture](A_simplified,_easy-to-understand_diagram_of_Kubern.png)
+![Kubernetes Architecture](k8s_architecture.png)
 
 This image shows the key components of the Control Plane and Worker Nodes, along with arrows indicating the flow of communication.
 
