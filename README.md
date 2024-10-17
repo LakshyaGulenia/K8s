@@ -154,4 +154,4 @@ This document contains the most commonly used Kubernetes commands for managing y
 
 ---
 
-Feel free to modify the descriptions and placeholders as needed!
+
