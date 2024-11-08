@@ -72,6 +72,11 @@ This document contains the most commonly used Kubernetes commands for managing y
   ```bash
   kubectl cluster-info
   ```
+## Deploy an Application:
+
+```bash
+kubectl apply -f <deployment.yaml>
+```
 
 ## Node Management
 
