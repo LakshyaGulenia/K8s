@@ -59,3 +59,104 @@ For more detailed documentation on each component, refer to the [Kubernetes offi
 - [kubectl Command Reference](https://kubernetes.io/docs/reference/kubectl/)
 - [kubeadm Setup Guide](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 - [kubefed User Guide](https://kubernetes.io/docs/tasks/federation/federation/)
+
+
+
+# Basic Kubernetes Commands
+
+This document contains the most commonly used Kubernetes commands for managing your cluster.
+
+## Cluster Information
+
+- **Get Cluster Info**
+  ```bash
+  kubectl cluster-info
+  ```
+## Deploy an Application:
+
+```bash
+kubectl apply -f <deployment.yaml>
+```
+
+## Node Management
+
+- **Get Nodes**
+  ```bash
+  kubectl get nodes
+  ```
+
+## Pod Management
+
+- **Get All Pods**
+  ```bash
+  kubectl get pods
+  ```
+
+- **Get Pods in a Specific Namespace**
+  ```bash
+  kubectl get pods -n <namespace>
+  ```
+
+- **Describe a Pod**
+  ```bash
+  kubectl describe pod <pod-name>
+  ```
+
+- **Delete a Pod**
+  ```bash
+  kubectl delete pod <pod-name>
+  ```
+
+## Deployment Management
+
+- **Create a Deployment**
+  ```bash
+  kubectl create deployment <deployment-name> --image=<image-name>
+  ```
+
+- **Get Deployments**
+  ```bash
+  kubectl get deployments
+  ```
+
+- **Scale a Deployment**
+  ```bash
+  kubectl scale deployment <deployment-name> --replicas=<number>
+  ```
+
+- **Expose a Deployment as a Service**
+  ```bash
+  kubectl expose deployment <deployment-name> --type=<service-type> --port=<port>
+  ```
+
+## Service Management
+
+- **Get Services**
+  ```bash
+  kubectl get services
+  ```
+
+## Logging
+
+- **Get Logs from a Pod**
+  ```bash
+  kubectl logs <pod-name>
+  ```
+
+## Resource Management
+
+- **Get All Resources**
+  ```bash
+  kubectl get all
+  ```
+
+## Shortcuts
+
+- **Watch Pods**
+  ```bash
+  kubectl get pods --watch
+  ```
+
+---
+
+
