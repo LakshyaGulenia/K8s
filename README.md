@@ -64,7 +64,7 @@ Imagine your cluster is a school:
 
 ---
 
-## 🧩 How etcd Fits in Kubernetes
+
 
 
    - **Controller Manager**: Manages controllers that ensure the cluster's desired state matches its actual state, handling nodes, endpoints, and replication.🛠️ What is the Controller Manager?
