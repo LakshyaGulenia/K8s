@@ -30,7 +30,37 @@ Kubernetes architecture consists of two main sections: the **Control Plane** and
    - **Etcd**: A key-value store that holds all cluster data, including configuration data, state information, and metadata.
    - **Controller Manager**: Manages controllers that ensure the cluster's desired state matches its actual state, handling nodes, endpoints, and replication.🛠️ What is the Controller Manager?
      The Controller Manager is like the supervisor in a factory.It watches the cluster and takes action to make sure the current state matches the desired state (as defined in your YAML files).
+     🧠 It manages different controllers like:
+
+Controller Type	What It Does
+Node Controller	Checks if nodes are up and healthy.
+ReplicaSet Controller	Makes sure the correct number of Pods are running.
+Deployment Controller	Ensures rolling updates or rollbacks happen smoothly.
+Job Controller	Manages batch jobs (run-to-completion tasks).
+📌 Example:
+If you say, “I want 3 Pods,” and one Pod crashes, the Controller Manager notices and spins up a new Pod to replace it.
+
+
+
+
    - **Scheduler**: Determines on which nodes new pods should be placed, based on resource requirements and the current workload.
+The Scheduler is like the HR person assigning employees to workstations.
+
+When a new Pod is created, the Scheduler decides which node (machine) it should run on based on:
+
+✅ Available resources (CPU, RAM)
+✅ Taints and tolerations
+✅ Node affinity rules
+✅ Workload distribution
+
+📌 Example:
+You request a new Pod → It’s created → Scheduler looks at all nodes and picks the best one → Pod is assigned to that node.
+
+🧠 In Simple Words:
+
+Component	Role
+Controller Manager	Keeps everything in the cluster working as expected. Fixes problems automatically.
+Scheduler	Decides where (which node) to run new Pods.
 
 ### 2. Worker Node Components
    - **Kubelet**: An agent running on each worker node, responsible for starting, stopping, and maintaining applications (containers).
