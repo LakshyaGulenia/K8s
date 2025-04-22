@@ -132,6 +132,7 @@ metadata:
 data:
   APP_MODE: "production"
   LOG_LEVEL: "debug"
+```
 
 ## Architecture Diagram
 
