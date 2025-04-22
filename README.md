@@ -110,6 +110,28 @@ Scheduler	Decides where (which node) to run new Pods.
    - **Pod**: The smallest and simplest Kubernetes object. Each pod represents a single instance of a running application.
    - **Service**: An abstraction layer that defines a logical set of pods and a policy for accessing them.
    - **Persistent Storage**: Allows for the storage of data that needs to persist beyond the lifetime of a pod.
+# 🛠️ ConfigMaps and Secrets in Kubernetes
+
+## 🔧 ConfigMap
+
+### ➤ What is it?
+A ConfigMap is a Kubernetes object used to store **non-sensitive** key-value pairs.
+
+### ➤ Use Cases:
+- Environment variables
+- App configuration files
+- Command-line arguments
+
+### ➤ Example:
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-config
+data:
+  APP_MODE: "production"
+  LOG_LEVEL: "debug"
 
 ## Architecture Diagram
 
